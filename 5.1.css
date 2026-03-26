@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(220, 201, 150);
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(110, 90, 223);
+    text-shadow: 0px 2px 0 rgb(73, 90, 96);
+}
+div.conteiner{
+    margin: 0 auto;
+    min-width: 250px;
+    max-width: 400px;
+}
+span.pre{
+    margin-left: 30px;
+}
+.white{
+    font-family:'Courier New', Courier, monospace;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+span.blue_text{
+    color: blue;
+    font-style: italic;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
