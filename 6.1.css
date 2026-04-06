@@ -11,13 +11,17 @@ caption{
 table{
     border-spacing : 0px;
     color: white;
-
 }
+
 tr:nth-child(2n){ 
     background-color: #313d6d;
 }
 tr:nth-child(2n+1){
     background-color: #8f2e18;
+}
+
+tr:hover{
+    background-color: #f0c800;
 }
 tr:first-child{
     background-color: #28185f;
@@ -27,12 +31,12 @@ tr:first-child{
     background-color: gray;
 }
 
-td{
-    border: 1px ;
-    text-align: center;
-    border-style: dashed;
-    border-color: black;
-    border-top: none;
-    border-left: none;
-    padding: 3px;
-}
+    td{
+        border: 1px ;   
+        text-align: center;
+        border-style: dashed;
+        border-color: black;    
+        border-top: none;
+        border-left: none;
+        padding: 3px;
+    }
