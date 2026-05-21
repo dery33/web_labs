@@ -5,8 +5,6 @@
 }
 body{
     overflow:hidden;
-    background-color: #fdfdfd;
-    animation: background_color_change 16s ease-in-out infinite;
     width: 100%;
     height: 100vh;
     
@@ -35,65 +33,119 @@ body{
 }
 @keyframes move {
     0% {
-        top: 100%;
-        left: 0%    
+        top: 75%;
+        left: -5%    
     }
     20% {
-        top: 80%;
-        left: 20%;
+        top: 50%;
     }
     40% {
-        top: 60%;
-        left: 40%;
+        top: 40%;
     }
     45% {
-        top: 55%;
-        left: 45%;
+        top: 35%;
     }
     55% {
-        top: 55%;
-        left: 55%;
+        top: 35%;
     }
     60% {
-        top: 60%;
-        left: 60%;
+        top: 40%;
     }
     80% {
-        top: 80%;
-        left: 80%;
+        top: 50%;
     }
     100% {
-        top: 100%;
-        left: 100%;
+        top: 75%;
+        left: 105%;
         
     }
 }
-@keyframes background_color_change {
-    0% {
-        
-        background: linear-gradient(to bottom, rgb(41, 47, 102), rgb(250, 146, 10));
-    }
-    25% {
-        background: linear-gradient(to bottom, rgb(19, 216, 223), rgb(10, 234, 250));
-    }
-    49% {
-        background: linear-gradient(to bottom, rgb(34, 88, 143), rgb(41, 25, 5));
-    }
-    51% {
-        background: linear-gradient(to bottom, rgb(10, 44, 77), rgb(15, 6, 46));
-    }
-    75% {
-        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(14, 15, 31));
-    }
-    100% {
-        background: linear-gradient(to bottom, rgb(16, 44, 70), rgb(250, 146, 10));
+.sky{
+    position: absolute;
+    top: 0;
+    width:100%;
+    height:85%;
 }
+.sky-day{ 
+    background:linear-gradient(80deg,#8dc8da 0%,#78b2ea 55%,#4b86c5 100%);
+    animation:dayFade 16s linear infinite;
+}
+.sky-night{
+    background:linear-gradient(280deg,#3a4680 0%,#1b2550 55%,#050814 100%);
+    animation:nightFade 16s linear infinite;
+    ;
 }
 
 
+
+.stars span{
+    position: absolute;
+    height: 3px;
+    width: 3px;
+    background-color: white;
+    border-radius: 100%;
+    inset: 0;
+    transform-origin: left bottom;
+    position: absolute;
+    animation: stars-reveal 16s linear infinite;
+}   
+.stars span:nth-child(1){
+    top: 5%;
+    left: 5%;
+}
+.stars span:nth-child(2){
+    top: 15%;
+    left: 25%;
+}
+.stars span:nth-child(3){
+    top: 25%;
+    left: 15%;
+}
+.stars span:nth-child(4){
+    top: 35%;
+    left: 35%;
+}
+.stars span:nth-child(5){
+    top: 25%;
+    left: 10%;
+}
+.stars span:nth-child(6){
+    top: 25%;
+    left: 30%;
+}
+.stars span:nth-child(7){
+    top: 25%;
+    left: 30%;
+}
+.stars span:nth-child(8){
+    top: 15%;
+    left: 40%;
+}
+.stars span:nth-child(9){
+    top: 10%;
+    left: 20%;
+}
+.stars span:nth-child(10){
+    top: 20%;
+    left: 5%;
+}
+
+
+@keyframes stars-reveal{
+    0%{opacity:0;}
+    49%{opacity:0;}
+
+    50%{opacity:0.3;}
+    60%{opacity:0.5;}
+    70%{opacity:0.8;}
+    100%{opacity:0;}
+}
+
+@keyframes twinkle {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0.5;}
     
-
-
+}
 @keyframes sun_to_moon {
     0%,45% {
         background: radial-gradient(circle at 33% 33%, #ffe818, #d89b00);
@@ -110,4 +162,26 @@ body{
     transform: scale(1);
     }
     100% {box-shadow: none; transform: scale(0.7);}
+}
+@keyframes dayFade{
+  0%{opacity:1;}
+  20%{opacity:1;}
+  40%{opacity:0.8;}
+  50%{opacity:0.4;}
+  60%{opacity:0.3;}
+  70%{opacity:0;}
+  80%{opacity:0;}
+  90%{opacity:0.3;}
+  100%{opacity:0.9;}
+}
+@keyframes nightFade{
+  0%{opacity:0;}
+  20%{opacity: 0;}
+  40%{opacity:0.2;}
+  50%{opacity:0.7;}
+  60%{opacity:0.9;}
+  70%{opacity:1;}
+  80%{opacity:0.9;}
+  90%{opacity:0.9}
+  100%{opacity:0.3s;}
 }
